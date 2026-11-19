@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>QUADRA</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="bg"></canvas>
+<header><div class="w hd">
+<a class="logo" href="#top"><svg width="26" height="26" viewBox="0 0 26 26"><rect x="1" y="1" width="10" height="10" fill="currentColor"/><rect x="15" y="1" width="10" height="10" fill="currentColor"/><rect x="1" y="15" width="10" height="10" fill="currentColor"/><rect x="15" y="15" width="4.5" height="4.5" fill="#FFD60A" stroke="currentColor" stroke-width="1.2"/><rect x="20.5" y="20.5" width="4.5" height="4.5" fill="currentColor"/></svg>Quadra</a>
+<span class="sh">Sheet 01 / QR Studio</span>
+<nav><a href="#studio">Studio</a><a href="#features">Specs</a><a href="#faq">FAQ</a></nav>
+</div></header>
+<main id="top"><div class="w">
+<section class="hero">
+<h1><span class="l"><span style="--d:0">Squares</span></span><span class="l"><span style="--d:1">with</span></span><span class="l"><span style="--d:2"><span class="hl">purpose.</span></span></span></h1>
+<p class="lead">A no-nonsense studio for QR codes. Pick a pattern, set your colors, export for print. Nothing leaves your browser.</p>
+<svg class="badge" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="cp" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs><text><textPath href="#cp" textLength="285" lengthAdjust="spacing">Private ✕ Vector ✕ Free ✕ </textPath></text><rect x="48" y="48" width="10" height="10" fill="currentColor"/><rect x="62" y="48" width="10" height="10" fill="#FFD60A" stroke="currentColor"/><rect x="48" y="62" width="10" height="10" fill="#FFD60A" stroke="currentColor"/><rect x="62" y="62" width="10" height="10" fill="currentColor"/></svg>
+</section>
+<section id="studio" class="studio">
+<div class="ctl">
+<div class="lab">01 Content</div>
+<div class="seg" id="tabs"></div>
+<div id="fields"></div>
+<div class="lab">02 Pattern</div>
+<div class="tiles" id="shape"></div>
+<div class="cols">
+<div><label for="f">Code color</label><div class="sw"><input type="color" id="f" value="#111110"><span id="fh">#111110</span></div></div>
+<div><label for="b">Background</label><div class="sw"><input type="color" id="b" value="#ffffff"><span id="bh">#FFFFFF</span></div></div>
+</div>
+<div class="pre" id="pre"></div>
+<p class="hint"><span id="ch"></span></p>
+<div class="lab">03 Error correction</div>
+<div class="seg" id="ecc"></div>
+<p class="hint" id="eh"></p>
+</div>
+<div class="pv">
+<div class="top" id="st"><span><b></b><span id="stt">Ready</span></span><span>Fig. 01</span></div>
+<div class="stage"><canvas id="cv" width="880" height="880"></canvas><span class="cm c1"></span><span class="cm c2"></span><span class="cm c3"></span><span class="cm c4"></span><span class="laser"></span></div>
+<div class="dim"><span id="m2">—</span></div>
+<div class="meta"><span id="m1"></span><span id="m3"></span><span id="m4"></span></div>
+<div class="dl">
+<button class="btn" id="png" disabled>PNG <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 1v9M3 6.5l4 4 4-4M1 13h12"/></svg></button>
+<button class="btn o" id="svg" disabled>SVG <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 1v9M3 6.5l4 4 4-4M1 13h12"/></svg></button>
+</div>
+<p class="meta" id="sv"></p>
+</div>
+</section>
+<div class="tk"><div id="tk"></div></div>
+<section id="features" class="s">
+<h2 class="rv">The specs.</h2>
+<div>
+<div class="row rv" style="--d:0"><b>01</b><h3>Private by design</h3><p>Every code is generated on your device. What you type never leaves this page.</p></div>
+<div class="row rv" style="--d:1"><b>02</b><h3>Print-ready output</h3><p>Download a 1024 px PNG or a resolution-independent SVG, with the quiet zone already built in.</p></div>
+<div class="row rv" style="--d:2"><b>03</b><h3>Six patterns</h3><p>Square, pixel, lines, columns, rounded or dots. Pick the geometry that fits your brand.</p></div>
+</div>
+</section>
+<section id="faq" class="s">
+<h2 class="rv">FAQ.</h2>
+<div class="rv">
+<details><summary>Will my QR code expire?</summary><p>No. These are static codes: the content is encoded directly in the pattern, so a code keeps working as long as its destination does.</p></details>
+<details><summary>Do the line and pixel patterns scan?</summary><p>Yes, but stylized patterns have less margin for error. Keep strong contrast, use Quartile or High correction for print, and test with a few phones before a large run.</p></details>
+<details><summary>Can I use these codes commercially?</summary><p>Yes. Use them on packaging, menus, signage, business cards and more.</p></details>
+</div>
+</section>
+</div></main>
+<footer><div class="w">© 2026 Quadra. QR Code is a registered trademark of DENSO WAVE INCORPORATED.<br>Codes are generated with qrcode-generator (MIT license).</div></footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
